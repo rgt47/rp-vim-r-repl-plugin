@@ -1,9 +1,6 @@
 ---
 title: "Writing a Simple Vim Plugin for REPL
   Interaction"
-subtitle: >
-  An alternative to Nvim-R and vim-slime for
-  sending code to an R terminal
 author: "Ronald 'Ryy' G. Thomas"
 date: "2025-05-20"
 categories: [vim, r]
@@ -28,7 +25,7 @@ format:
 ![A terminal split between a Vim editing buffer
 and a running R session with code being
 sent between them](media/images/hero.jpg){.img-fluid
-width=80%}
+width=80% fig-align="center"}
 
 *A lightweight Vim plugin for sending R code to a
 terminal REPL.*
