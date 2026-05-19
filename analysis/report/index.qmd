@@ -35,9 +35,8 @@ terminal REPL.*
 I did not really know how Vim's terminal API worked
 until I sat down and wrote a small plugin that
 sends code from an editing buffer to a running R
-session. The established tools for this task --
-Nvim-R and vim-slime -- are feature-rich but
-complex. I wanted something minimal: select code in
+session. The established tools for this task (Nvim-R and
+vim-slime) are feature-rich but complex. I wanted something minimal: select code in
 Vim, press a key, and see it execute in an R
 terminal pane.
 
@@ -100,9 +99,8 @@ custom snippets.
    in visual selection submission and Quarto
    rendering.
 
-I am documenting my learning process here. If you
-spot errors or have better approaches, please let
-me know.
+This learning process is documented here. Errors
+spotted or better approaches are always welcome.
 
 ![](media/images/vim-logo.png){.img-fluid width=30% fig-align="center"}
 
@@ -111,12 +109,12 @@ to custom development workflows.*
 
 # Prerequisites and Setup
 
-To use this plugin, you will need:
+To use this plugin, one will need:
 
 - Vim 8.0 or later with `+terminal` feature
   (check with `:echo has('terminal')`)
 - R installed and accessible from the command line
-- The plugin file placed in your Vim plugin
+- The plugin file placed in the Vim plugin
   directory (e.g., `~/.vim/plugin/rgt-R.vim`)
 
 **Background assumed:** Basic Vim fluency (normal
@@ -131,18 +129,17 @@ To verify terminal support:
 ```
 
 If this returns `1`, your Vim build supports the
-terminal API. If it returns `0`, you will need to
-install a Vim build with terminal support (e.g.,
-`brew install vim` on macOS).
+terminal API. If it returns `0`, a Vim build with terminal support
+must be installed (e.g., `brew install vim` on
+macOS).
 
 # What is a Vim REPL Plugin?
 
 A REPL (Read-Eval-Print Loop) plugin connects a
-text editor to a running interpreter. You write
-code in the editor, press a key combination, and
-the code is sent to the interpreter for execution.
-The interpreter prints its output, and you continue
-editing.
+text editor to a running interpreter. Code is
+written in the editor, a key combination sends it
+to the interpreter for execution, the interpreter
+prints its output, and editing continues.
 
 Vim's terminal API provides the plumbing for this
 connection. The function `term_list()` returns a
@@ -152,7 +149,7 @@ terminal. By combining these with Vim's visual
 selection and search capabilities, a small plugin
 can provide a complete code-submission workflow.
 
-Think of it as a pipe between your editor and your
+Think of it as a pipe between the editor and the
 R session. The plugin handles the mechanics of
 extracting selected text and pushing it through the
 pipe; R handles the evaluation and output.
@@ -506,10 +503,10 @@ command separator.
 ## Things to Watch Out For
 
 1. **`term_list()[0]` assumes one terminal.** If
-   you have multiple terminal buffers open, the
-   plugin sends code to the first one, which may
-   not be the R session. Close unused terminals or
-   modify the plugin to target a specific buffer.
+   multiple terminal buffers are open, the plugin
+   sends code to the first one, which may not be
+   the R session. Close unused terminals or modify
+   the plugin to target a specific buffer.
 2. **The `source_visual` temp file persists.** The
    plugin writes a temporary file to the current
    directory on every visual submission. Add
@@ -522,7 +519,7 @@ command separator.
    between file writing and sourcing.
 4. **`<CR>` remapping overrides Enter in normal
    mode.** This is intentional for R files but may
-   surprise users who expect Enter to move the
+   surprise those who expect Enter to move the
    cursor down. The mapping only applies to R, Rmd,
    and Qmd filetypes.
 
@@ -572,7 +569,7 @@ internals than a feature-rich one.*
   the selection as a unit.
 - `term_list()` returns terminals in creation order,
   not in order of last use; the first terminal may
-  not be the one you expect.
+  not be the intended one.
 - The `<C-r>%` expansion in mappings inserts the
   current filename, but fails if the filename
   contains spaces.
@@ -620,63 +617,66 @@ internals than a feature-rich one.*
 
 # Wrapping Up
 
-Writing a Vim plugin for REPL interaction taught me
-more about Vim's terminal API than months of using
-other people's plugins. The result -- `rgt-R.vim` --
-is under 150 lines, has no external dependencies,
-and handles the core workflow of sending R code from
-an editing buffer to a running terminal session.
+Writing a Vim plugin for REPL interaction proved to
+teach more about Vim's terminal API than months of
+using other developers' plugins. The result
+(`rgt-R.vim`) is under 150 lines, has no external
+dependencies, and handles the core workflow of
+sending R code from an editing buffer to a running
+terminal session.
 
-What I learnt most from this project is that
-minimalism in tooling is undervalued. The
-established R-Vim plugins are powerful, but their
-complexity creates a barrier to understanding and
-customisation. A small, readable plugin that you
-wrote yourself is easier to debug, extend, and
-teach from than a large plugin maintained by someone
-else.
+What this project made clear is that minimalism in
+tooling is undervalued. The established R-Vim
+plugins are powerful, but their complexity creates a
+barrier to understanding and customisation. A small,
+readable plugin that one has written is easier to
+debug, extend, and teach from than a large plugin
+maintained by someone else.
 
-If you use Vim for R development and find the
-existing plugins more complex than you need, I
-encourage you to try writing your own. The terminal
-API is well-documented, and a working plugin can be
-built in an afternoon.
+Vim users working in R who find the existing plugins
+more complex than needed are encouraged to try
+writing their own. The terminal API is
+well-documented, and a working plugin can be built
+in an afternoon.
 
-Main takeaways:
-
-- Vim's `term_sendkeys()` and `term_list()` provide
-  the complete infrastructure for REPL interaction.
-- The two-stage submission pattern (file, then
-  source) handles multi-line selections robustly.
-- Autocommand groups scope mappings to relevant
-  filetypes without affecting other buffers.
-- A minimal plugin under 150 lines covers 90% of
-  daily R interaction needs.
+In conclusion, four points merit emphasis. First,
+Vim's `term_sendkeys()` and `term_list()` provide
+the complete infrastructure for REPL interaction
+without any external dependencies. Second, the
+two-stage submission pattern (write to file, then
+source) handles multi-line selections robustly,
+avoiding the timing issues of direct text injection.
+Third, autocommand groups scope mappings to relevant
+filetypes without affecting other buffers, keeping
+the plugin non-intrusive. Fourth, a minimal plugin
+under 150 lines covers 90% of daily R interaction
+needs, which is a favourable ratio of complexity
+to utility.
 
 # See Also
 
 **Related posts:**
 
 - [Configure the Command Line for Data Science](
-  ../01-configtermzsh/) --
+  ../01-configtermzsh/):
   Terminal and shell configuration for development
 
 **Key resources:**
 
 - [Vim Terminal API](
-  https://vimhelp.org/terminal.txt.html) --
+  https://vimhelp.org/terminal.txt.html):
   Official documentation for terminal functions
 - [Chris Toomey's Vim Talk](
-  https://www.youtube.com/watch?v=lwD8G1P52Sk) --
+  https://www.youtube.com/watch?v=lwD8G1P52Sk):
   Inspiration for the plugin approach
 - [Nvim-R](
-  https://github.com/jalvesaq/Nvim-R) --
+  https://github.com/jalvesaq/Nvim-R):
   The full-featured alternative for Neovim
 - [vim-slime](
-  https://github.com/jpalardy/vim-slime) --
+  https://github.com/jpalardy/vim-slime):
   The tmux-based alternative
 - [Learn Vimscript the Hard Way](
-  https://learnvimscriptthehardway.stevelosh.com/) --
+  https://learnvimscriptthehardway.stevelosh.com/):
   Comprehensive guide to writing Vim plugins
 
 # Reproducibility
@@ -696,9 +696,9 @@ above. To install:
 
 ```
 simplevimplugin/
-  analysis/report/index.qmd  -- This post
-  plugin/rgt-R.vim            -- The plugin
-  analysis/media/images/      -- Hero, ambiance
+  analysis/report/index.qmd  (this post)
+  plugin/rgt-R.vim            (the plugin)
+  analysis/media/images/      (hero, ambiance)
 ```
 
 ```{r}
@@ -719,14 +719,12 @@ sessionInfo()
 - **Email:**
   [rgtlab.org/contact](https://rgtlab.org/contact)
 
-I would enjoy hearing from you if:
+I would enjoy hearing from readers who:
 
-- You spot an error or a better approach to any of
+- Spot an error or a better approach to any of
   the code in this post.
-- You have suggestions for topics you would like to
-  see covered.
-- You want to discuss R programming, data science,
+- Have suggestions for topics to cover.
+- Want to discuss R programming, data science,
   or reproducible research.
-- You have questions about anything in this
-  tutorial.
-- You just want to say hello and connect.
+- Have questions about anything in this tutorial.
+- Simply want to say hello and connect.
