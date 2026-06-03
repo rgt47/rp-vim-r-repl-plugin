@@ -9,7 +9,7 @@ description: >
   worked until I wrote a small plugin that sends
   code from an editing buffer to a running R
   session.
-image: "media/images/hero.jpg"
+image: "media/images/hero.png"
 document-type: "blog"
 draft: false
 execute:
@@ -26,7 +26,7 @@ cluster-order: 2
 
 ![A terminal split between a Vim editing buffer
 and a running R session with code being
-sent between them](media/images/hero.jpg){.img-fluid
+sent between them](media/images/hero.png){.img-fluid
 width=80% fig-align="center"}
 
 *A lightweight Vim plugin for sending R code to a
