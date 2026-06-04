@@ -11,7 +11,7 @@ description: >
   session.
 image: "media/images/hero.png"
 document-type: "blog"
-draft: false
+draft: true
 execute:
   echo: true
   warning: false
@@ -360,7 +360,7 @@ directly in scripts.
 
 ![A split terminal showing Vim on the left and R
 output on the right with code being
-evaluated](media/images/ambiance2.jpg){.img-fluid}
+evaluated](media/images/ambiance2.png){.img-fluid}
 
 *The plugin in action: code flows from the editor
 to the R terminal with a single keypress.*
@@ -527,7 +527,7 @@ command separator.
 
 ![Reference documentation for VimScript functions
 beside an open terminal
-editor](media/images/ambiance3.jpg){.img-fluid}
+editor](media/images/ambiance3.png){.img-fluid}
 
 *A minimal plugin teaches more about Vim's
 internals than a feature-rich one.*
