@@ -1,17 +1,18 @@
 ---
-title: "Writing a Simple Vim Plugin for REPL
-  Interaction"
-author: "Ronald 'Ryy' G. Thomas"
-date: "2025-05-20"
-categories: [vim, r]
-description: >
-  I did not really know how Vim's terminal API
-  worked until I wrote a small plugin that sends
-  code from an editing buffer to a running R
-  session.
-image: "media/images/hero.png"
-document-type: "blog"
-draft: true
+title: Writing a Simple Vim Plugin for REPL Interaction
+author: Ronald 'Ryy' G. Thomas
+date: '2025-05-20'
+categories:
+- vim
+- r
+- r-packages
+description: 'I did not really know how Vim''s terminal API worked until I wrote a
+  small plugin that sends code from an editing buffer to a running R session.
+
+  '
+image: media/images/hero.png
+document-type: blog
+draft: false
 execute:
   echo: true
   warning: false
