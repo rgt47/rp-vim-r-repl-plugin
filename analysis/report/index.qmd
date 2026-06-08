@@ -1,6 +1,6 @@
 ---
 title: Writing a Simple Vim Plugin for REPL Interaction
-author: Ronald 'Ryy' G. Thomas
+author: Ronald G. Thomas
 date: '2025-05-20'
 categories:
 - vim
