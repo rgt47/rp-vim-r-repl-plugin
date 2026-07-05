@@ -12,7 +12,7 @@ description: 'I did not really know how Vim''s terminal API worked until I wrote
   '
 image: media/images/hero.png
 document-type: blog
-draft: false
+draft: true
 execute:
   echo: true
   warning: false
