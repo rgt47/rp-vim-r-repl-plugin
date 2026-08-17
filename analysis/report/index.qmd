@@ -1,17 +1,11 @@
 ---
-title: Writing a Simple Vim Plugin for REPL Interaction
+title: "Writing a Simple Vim Plugin for REPL Interaction"
 author: "Ronald G. Thomas"
-date: '2025-05-20'
-categories:
-- vim
-- r
-- r-packages
-description: 'I did not really know how Vim''s terminal API worked until I wrote a
-  small plugin that sends code from an editing buffer to a running R session.
-
-  '
-image: media/images/hero.png
-document-type: blog
+date: "2025-05-20"
+categories: [vim, r, r-packages]
+description: "I did not really know how Vim's terminal API worked until I wrote a small plugin that sends code from an editing buffer to a running R session."
+image: "media/images/hero.png"
+document-type: "blog"
 draft: true
 execute:
   echo: true
@@ -357,7 +351,7 @@ directly in scripts.
 
 ![A split terminal showing Vim on the left and R
 output on the right with code being
-evaluated](media/images/ambiance2.png){.img-fluid}
+evaluated](media/images/ambiance2.png){.img-fluid height=3.5in}
 
 *The plugin in action: code flows from the editor
 to the R terminal with a single keypress.*
@@ -524,7 +518,7 @@ command separator.
 
 ![Reference documentation for VimScript functions
 beside an open terminal
-editor](media/images/ambiance3.png){.img-fluid}
+editor](media/images/ambiance3.png){.img-fluid height=3.5in}
 
 *A minimal plugin teaches more about Vim's
 internals than a feature-rich one.*
