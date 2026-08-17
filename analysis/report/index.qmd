@@ -1,6 +1,6 @@
 ---
 title: Writing a Simple Vim Plugin for REPL Interaction
-author: Ronald G. Thomas
+author: "Ronald G. Thomas"
 date: '2025-05-20'
 categories:
 - vim
@@ -17,10 +17,6 @@ execute:
   echo: true
   warning: false
   message: false
-format:
-  html:
-    code-fold: false
-    code-tools: false
 cluster: r-packages
 cluster-order: 2
 ---
