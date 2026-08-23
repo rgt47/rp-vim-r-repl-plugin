@@ -48,13 +48,11 @@ the design.
 
 More formally, this post documents the Vim-plugins layer
 (Layer 6) of the Workflow Construct described in
-[post 52](/posts/52-workflow-construct/) from the authorship
+[the Workflow Construct overview](../wf-construct-overview-anchor/) from the authorship
 side: how a plugin is written, not which plugins to install.
 This is the construct's editor-extensibility companion to
-[post 30](/posts/30-setupRvimtex/) (which documents specific
-R-plus-LaTeX plugins) and
-[post 41](/posts/41-ultisnipspythonpost/) (which documents
-UltiSnips snippet authorship). Together the three posts give
+[Extending the R-Vim Workflow with LaTeX](../wf-r-vim-latex-workflow/) (which documents specific
+R-plus-LaTeX plugins and UltiSnips snippet authorship). Together the posts give
 the reader the full picture of the Vim-plugins layer: which
 plugins to use, how to write one, and how to extend one with
 custom snippets.
@@ -650,8 +648,8 @@ to utility.
 
 **Related posts:**
 
-- [Configure the Command Line for Data Science](
-  ../01-configtermzsh/):
+- [Unix Command-Line Workspace Setup for Data Science](
+  ../wf-unix-workspace-config/):
   Terminal and shell configuration for development
 
 **Key resources:**
