@@ -51,7 +51,7 @@ More formally, this post documents the Vim-plugins layer
 [the Workflow Construct overview](../wf-construct-overview-anchor/) from the authorship
 side: how a plugin is written, not which plugins to install.
 This is the construct's editor-extensibility companion to
-[Extending the R-Vim Workflow with LaTeX](../wf-r-vim-latex-workflow/) (which documents specific
+[Setting Up Neovim as a Data Science IDE](../wf-neovim-data-science-ide/) (which documents specific
 R-plus-LaTeX plugins and UltiSnips snippet authorship). Together the posts give
 the reader the full picture of the Vim-plugins layer: which
 plugins to use, how to write one, and how to extend one with
