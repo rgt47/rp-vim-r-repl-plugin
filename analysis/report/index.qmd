@@ -347,9 +347,10 @@ directly in scripts.
 
 **Mapping:** `<localleader>z` in visual mode.
 
-![A split terminal showing Vim on the left and R
-output on the right with code being
-evaluated](media/images/ambiance2.png){.img-fluid height=3.5in}
+![Two vintage rotary telephones connected by a coiled
+cord, one receiver lifted off the hook: a direct, live
+line between the editor and a running
+session](media/images/ambiance2.jpg){.img-fluid height=3.5in}
 
 *The plugin in action: code flows from the editor
 to the R terminal with a single keypress.*
