@@ -537,7 +537,7 @@ editor](media/images/ambiance3.png){.img-fluid height=3.5in}
 *A minimal plugin teaches more about Vim's
 internals than a feature-rich one.*
 
-## Lessons Learnt
+## Lessons Learned
 
 ### Conceptual Understanding
 
@@ -593,7 +593,7 @@ internals than a feature-rich one.*
   submissions; multiple R sessions are not
   supported.
 - The `source_visual` temporary file approach
-  leaves artefacts in the working directory.
+  leaves artifacts in the working directory.
 - No support for sending code to non-R interpreters
   (Python, Julia, etc.) without modification.
 - The plugin does not provide R object completion,
@@ -644,7 +644,7 @@ terminal session.
 What this project made clear is that minimalism in
 tooling is undervalued. The established R-Vim
 plugins are powerful, but their complexity creates a
-barrier to understanding and customisation. A small,
+barrier to understanding and customization. A small,
 readable plugin that one has written is easier to
 debug, extend, and teach from than a large plugin
 maintained by someone else.
@@ -666,7 +666,7 @@ Third, autocommand groups scope mappings to relevant
 filetypes without affecting other buffers, keeping
 the plugin non-intrusive. Fourth, a minimal plugin
 under 150 lines covers 90% of daily R interaction
-needs, which is a favourable ratio of complexity
+needs, which is a favorable ratio of complexity
 to utility.
 
 # See Also
