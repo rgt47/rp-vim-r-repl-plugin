@@ -6,7 +6,7 @@ categories: [vim, r, r-packages]
 description: "I did not really know how Vim's terminal API worked until I wrote a small plugin that sends code from an editing buffer to a running R session."
 image: "media/images/hero.png"
 document-type: "blog"
-draft: true
+draft: false
 execute:
   echo: true
   warning: false
