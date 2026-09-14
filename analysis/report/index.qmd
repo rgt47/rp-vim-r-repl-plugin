@@ -3,7 +3,7 @@ title: "Writing a Simple Vim Plugin for REPL Interaction"
 author: "Ronald G. Thomas"
 date: "2025-05-20"
 categories: [vim, r, r-packages]
-description: "I did not really know how Vim's terminal API worked until I wrote a small plugin that sends code from an editing buffer to a running R session."
+description: "Writing a small plugin that sends code from an editing buffer to a running R session is the fastest way to learn how Vim's terminal API works."
 image: "media/images/hero.png"
 document-type: "blog"
 draft: false
@@ -25,9 +25,9 @@ terminal REPL.*
 
 # Introduction
 
-I did not really know how Vim's terminal API worked
-until I sat down and wrote a small plugin that
-sends code from an editing buffer to a running R
+Vim's terminal API is best learned by using it, so I
+sat down and wrote a small plugin that sends code
+from an editing buffer to a running R
 session. The established tools for this task (Nvim-R and
 vim-slime) are feature-rich but complex. I wanted something minimal: select code in
 Vim, press a key, and see it execute in an R
