@@ -4,7 +4,7 @@ author: "Ronald G. Thomas"
 date: "2025-05-20"
 categories: [vim, r, r-packages]
 description: "Writing a small plugin that sends code from an editing buffer to a running R session is the fastest way to learn how Vim's terminal API works."
-image: "media/images/hero.png"
+image: "media/images/hero.jpg"
 document-type: "blog"
 draft: false
 execute:
@@ -17,7 +17,7 @@ cluster-order: 2
 
 ![A terminal split between a Vim editing buffer
 and a running R session with code being
-sent between them](media/images/hero.png){.img-fluid
+sent between them](media/images/hero.jpg){.img-fluid
 width=80% fig-align="center"}
 
 *A lightweight Vim plugin for sending R code to a
@@ -112,6 +112,8 @@ spotted or better approaches are always welcome.
 
 *Understanding Vim's terminal API opens the door
 to custom development workflows.*
+
+![Two tin cans joined by a taut string across a workbench.](media/images/ambiance1.jpg){.img-fluid height=3.5in}
 
 # Prerequisites and Setup
 
@@ -367,9 +369,6 @@ cord, one receiver lifted off the hook: a direct, live
 line between the editor and a running
 session](media/images/ambiance2.jpg){.img-fluid height=3.5in}
 
-*The plugin in action: code flows from the editor
-to the R terminal with a single keypress.*
-
 ## The Autocommand Group
 
 The complete autocommand group restricts all
@@ -532,10 +531,7 @@ command separator.
 
 ![Reference documentation for VimScript functions
 beside an open terminal
-editor](media/images/ambiance3.png){.img-fluid height=3.5in}
-
-*A minimal plugin teaches more about Vim's
-internals than a feature-rich one.*
+editor](media/images/ambiance3.jpg){.img-fluid height=3.5in}
 
 ## Lessons Learned
 
